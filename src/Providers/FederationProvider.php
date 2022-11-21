@@ -24,7 +24,9 @@ class FederationProvider extends AbstractServiceProvider
             $extension = $extensions->getExtension('blomstra-federation');
 
             return new Server([
-                'logger' => $container->make(LoggerInterface::class),
+                'logger' => [
+                    'stream' => $paths->storage . '/logs/federation.log'
+                ],
                 'http' => [
                     'agent' => 'blomstra/flarum-ext-federation:' . ($extension->getVersion() ?? 'dev')
                 ],
