@@ -17,8 +17,7 @@ class ArticleController extends AbstractShowController
     public $serializer = ArticleSerializer::class;
 
     public function __construct(protected DiscussionRepository $discussions)
-    {
-    }
+    {}
 
     protected function data(ServerRequestInterface $request, Document $document)
     {

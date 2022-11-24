@@ -10,6 +10,6 @@ class PersonSerializer extends AbstractSerializer
     {
         return $this->getUrlGenerator()
             ->to('forum')
-            ->route('user', ['username' => $model->preferredUsername]);
+            ->route('user', ['username' => $model->slug]);
     }
 }

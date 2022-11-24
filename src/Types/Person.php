@@ -11,6 +11,7 @@ class Person extends \ActivityPhp\Type\Extended\Actor\Person
         $person = new Person;
         $person->name = $user->display_name;
         $person->preferredUsername = $user->username;
+        $person->slug = $user->slug;
         $person->image = $user->avatar_url;
         $person->published = $user->joined_at->toAtomString();
 
